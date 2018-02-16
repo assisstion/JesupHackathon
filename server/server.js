@@ -12,7 +12,17 @@ app.use(express.static(clientPath));
 
 const io = socketio(server);
 
-let gameNames = [];
+//Functions that the game use to send data
+module.exports = {
+  sendClient: function(roomId, player, data){
+    let players = playersInRoom(roomId);
+    let target = players[player];
+    let sock = clients[target].socket;
+    sock.emit('message', cmd('gameUpdate', data));
+  }
+};
+
+let gameNames = ['rps'];
 
 
 //key: gameName
@@ -104,7 +114,13 @@ let commands = {
       gameName: data.gameName,
       gameData: data.initData
     };
-    clients[user].roomId = roomId;
+    if(clients[user]){
+      clients[user].roomId = roomId;
+    }
+    else{
+      console.log('Create room failed, user not registered!');
+      return;
+    }
     sock.emit('message', cmd('createSuccess', {
       'roomId': roomId
     }));
@@ -112,12 +128,14 @@ let commands = {
       'roomId': roomId,
       'gameName': data.gameName
     }));
-    console.log('Room created!');
+    console.log(`Room created with id ${roomId}!`);
     //If player join causes cap to be reached,
     //start the game
     let info = gameInfo(rooms[roomId].gameName);
-    if(players.length == info.playerCount){
-      startGame(roomId);
+    if(info){
+      if(rooms[roomId].players.length == info.playerCount){
+        startGame(roomId);
+      }
     }
   },
   joinRoom: function(sock, user, data){
@@ -125,7 +143,13 @@ let commands = {
     if(rooms[roomId]){
       let players = playersInRoom(roomId);
       players.push(user);
-      clients[user].roomId = roomId;
+      if(clients[user]){
+        clients[user].roomId = roomId;
+      }
+      else{
+        console.log('Join room failed, user not registered!');
+        return;
+      }
       sock.emit('message', cmd('joinSuccess', {
         playerList: players
       }));
@@ -143,8 +167,10 @@ let commands = {
       //If player join causes cap to be reached,
       //start the game
       let info = gameInfo(rooms[roomId].gameName);
-      if(players.length == info.playerCount){
-        startGame(roomId);
+      if(info){
+        if(players.length == info.playerCount){
+          startGame(roomId);
+        }
       }
     }
     else{
@@ -156,9 +182,21 @@ let commands = {
   },
   gameMove: function(sock, user, data){
     //Find the player's game
+    if(!clients[user]){
+      console.log('Game update failed, user not registered!');
+      return;
+    }
     let roomId = clients[user].roomId;
     let room = rooms[roomId];
+    if(!room){
+      console.log('Game update failed, no room found!');
+      return;
+    }
     let game = room.game;
+    if(!game){
+      console.log('Game update failed, game has not begun!');
+      return;
+    }
     //Find the player in the user list
     let playerList = room.players;
     let found = -1;
@@ -169,6 +207,7 @@ let commands = {
       }
     }
     game.update(found, data);
+    console.log('Game updated.');
   }
 };
 
@@ -204,9 +243,11 @@ function startGame(roomId){
   room.game = gameInstance(room.gameName);
   let playerCount = room.players.length;
   room.game.start(roomId, playerCount, room.gameData);
+  console.log(`Game in room ${roomId} has started!`);
 }
 
 function loadGames(){
+  let count = 0;
   for(let i = 0; i < gameNames.length; i++){
     let name = gameNames[i];
     let gameExport = require(`./games/${name}.js`);
@@ -214,26 +255,25 @@ function loadGames(){
       getInstance: gameExport.getInstance,
       getInfo: gameExport.getInfo
     };
+    count += 1;
   }
+  console.log(`${count} games loaded!`);
 }
 
 function gameInfo(gameName){
+  if(!games[gameName]){
+    return null;
+  }
   return games[gameName].getInfo();
 }
 
 function gameInstance(gameName){
+  if(!games[gameName]){
+    return null;
+  }
   return games[gameName].getInstance();
 }
 
-//Functions that the game use to send data
-module.exports = {
-  sendClient: function(roomId, player, data){
-    let players = playersInRoom(roomId);
-    let target = players[player];
-    let sock = clients[target].socket;
-    sock.emit('message', cmd('gameUpdate', data));
-  }
-};
 
 //Games export a getInstance method,
 //Insances have
