@@ -5,9 +5,15 @@
   <title> Rock Paper Scissors </title>
 </head>
 <style>
-body {
-  background-color: #ffffff;
-}
+  body {
+    background-color: #512698;
+  }
+  p {
+    color: #cccccc;
+  }
+  h1 {
+    color: #cccccc;
+  }
 </style>
 <body>
 
@@ -82,6 +88,15 @@ document.addEventListener('gameMessage', (evt) => {
   parent.appendChild(el);
 });
 </script>
+  <div align="right">
+  <button onclick="hiddenCredits()"><img src="williams.png" /></button>
+  <p id="credits"></p>
+  </div>
 
+  <script>
+  function hiddenCredits() {
+    document.getElementById("credits").innerHTML = "Credits: Markus Feng, Christopher Liu, Jian Lu, and Will Fung";
+  }
+  </script>
 </body>
 </html>

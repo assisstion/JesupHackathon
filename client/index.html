@@ -5,6 +5,19 @@
       <link rel="stylesheet" href="styles/main.css">
     </head>
 
+    <style>
+      body {
+        background-color: #512698;
+      }
+      p {
+        color: #cccccc;
+      }
+      h1 {
+        color: #cccccc;
+      }
+    </style>
+    <div align="center">
+    <h1> Welcome to Williams Games Online </h1>
     <body>
       <div class= "rps-wrapper">
         <ul id="events" hidden>
@@ -12,7 +25,7 @@
 
         <div class="button-wrapper">
           <form id="register-form">
-            Nickname: <input id="nickname"></input>
+            <span style="color: #cccccccc">Nickname:</span> <input id="nickname"></input>
             <!--<button id ="submit">Register</button>-->
           </form>
           <form id="create-form">
@@ -22,7 +35,7 @@
             <button id ="submit">Create Game</button>
           </form>
           <form id="join-form">
-            Room ID: <input id="roomId"></input>
+            <span style="color: #cccccccc">Room ID:</span> <input id="roomId"></input>
             <button id ="submit">Join Game</button>
           </form>
         </div>
@@ -32,4 +45,14 @@
       <script src="src/clientlib.js"></script>
       <script src="src/clienthome.js"></script>
     </body>
+    <br>
+    <br>
+    <button onclick="hiddenCredits()"><img src="./rps/williams.png" /></button>
+    <p id="credits"></p>
+    <script>
+    function hiddenCredits() {
+      document.getElementById("credits").innerHTML = "Credits: Markus Feng, Christopher Liu, Jian Lu, and Will Fung";
+    }
+    </script>
+  </div>
 </html>
