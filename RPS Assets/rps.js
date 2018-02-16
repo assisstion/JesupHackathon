@@ -7,12 +7,14 @@ export class RPS {
     this.p0.scissors = false;
     this.p0.win = false;
     this.p0.hasUpdated = false;
+    this.p0.wincount = 0;
 
     this.p1.rock = false;
     this.p1.paper = false;
     this.p1.scissors = false;
     this.p1.win = false;
     this.p1.hasUpdated = false;
+    this.p1.wincount = 0;
   }
 
   //Player One actions
@@ -172,10 +174,12 @@ export class RPS {
       if(this.p0.win){
         winner = 0;
         loser = 1;
+        this.p0.wincount += 1;
       }
       else{
         winner = 1;
         loser = 0;
+        this.p1.wincount += 1;
       }
       server.sendClient(winner, {
         message: 'win'
