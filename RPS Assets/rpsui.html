@@ -18,7 +18,10 @@ h1 {
 <body>
 
   <h1> Welcome to Williams Rock Paper Scissors </h1>
-  <br>
+  <div align="right">
+
+  </div>
+    <br>
   <br>
   <p> Choose your throw </p>
   <br>
@@ -47,6 +50,19 @@ function playScissors() {
 </script>
 
 <p id="message"></p>
+<br>
+<br>
+<div align="right">
+  <p id="credits"></p>
+<button onclick="hiddenCredits()"><img src="williams.png" /></button>
+</div>
+
+<script>
+function hiddenCredits() {
+  document.getElementById("credits").innerHTML = "Credits: Markus Feng, Christopher Liu, Jian Lu, and Will Fung";
+}
+</script>
+
 
 </body>
 </html>
