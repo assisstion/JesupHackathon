@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+	<body>
+		<script src="Gomoku.js"></script>
+		<table>
+			<tr>
+			<td><input id="gbtn1" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 0, 'gbtn1')"></td>
+			<td><input id="gbtn2" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 1, 'gbtn2')"></td>
+			<td><input id="gbtn3" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 2, 'gbtn3')"></td>
+			<td><input id="gbtn4" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 3, 'gbtn4')"></td>
+			<td><input id="gbtn5" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 4, 'gbtn5')"></td>
+			<td><input id="gbtn6" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 5, 'gbtn6')"></td>
+			<td><input id="gbtn7" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 6, 'gbtn7')"></td>
+			<td><input id="gbtn8" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 7, 'gbtn8')"></td>
+			<td><input id="gbtn9" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 8, 'gbtn9')"></td>
+			<td><input id="gbtn10" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 9, 'gbtn10')"></td>
+			<td><input id="gbtn11" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 10, 'gbtn11')"></td>
+			<td><input id="gbtn12" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 11, 'gbtn12')"></td>
+			<td><input id="gbtn13" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 12, 'gbtn13')"></td>
+			<td><input id="gbtn14" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 13, 'gbtn14')"></td>
+			<td><input id="gbtn15" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 14, 'gbtn15')"></td>
+			<td><input id="gbtn16" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 15, 'gbtn16')"></td>
+			<td><input id="gbtn17" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 16, 'gbtn17')"></td>
+			<td><input id="gbtn18" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 17, 'gbtn18')"></td>
+			<td><input id="gbtn19" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(0, 18, 'gbtn19')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn20" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 0, 'gbtn20')"></td>
+			<td><input id="gbtn21" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 1, 'gbtn21')"></td>
+			<td><input id="gbtn22" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 2, 'gbtn22')"></td>
+			<td><input id="gbtn23" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 3, 'gbtn23')"></td>
+			<td><input id="gbtn24" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 4, 'gbtn24')"></td>
+			<td><input id="gbtn25" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 5, 'gbtn25')"></td>
+			<td><input id="gbtn26" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 6, 'gbtn26')"></td>
+			<td><input id="gbtn27" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 7, 'gbtn27')"></td>
+			<td><input id="gbtn28" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 8, 'gbtn28')"></td>
+			<td><input id="gbtn29" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 9, 'gbtn29')"></td>
+			<td><input id="gbtn30" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 10, 'gbtn30')"></td>
+			<td><input id="gbtn31" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 11, 'gbtn31')"></td>
+			<td><input id="gbtn32" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 12, 'gbtn32')"></td>
+			<td><input id="gbtn33" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 13, 'gbtn33')"></td>
+			<td><input id="gbtn34" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 14, 'gbtn34')"></td>
+			<td><input id="gbtn35" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 15, 'gbtn35')"></td>
+			<td><input id="gbtn36" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 16, 'gbtn36')"></td>
+			<td><input id="gbtn37" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 17, 'gbtn37')"></td>
+			<td><input id="gbtn38" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(1, 18, 'gbtn38')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn39" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 0, 'gbtn39')"></td>
+			<td><input id="gbtn40" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 1, 'gbtn40')"></td>
+			<td><input id="gbtn41" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 2, 'gbtn41')"></td>
+			<td><input id="gbtn42" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 3, 'gbtn42')"></td>
+			<td><input id="gbtn43" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 4, 'gbtn43')"></td>
+			<td><input id="gbtn44" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 5, 'gbtn44')"></td>
+			<td><input id="gbtn45" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 6, 'gbtn45')"></td>
+			<td><input id="gbtn46" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 7, 'gbtn46')"></td>
+			<td><input id="gbtn47" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 8, 'gbtn47')"></td>
+			<td><input id="gbtn48" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 9, 'gbtn48')"></td>
+			<td><input id="gbtn49" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 10, 'gbtn49')"></td>
+			<td><input id="gbtn50" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 11, 'gbtn50')"></td>
+			<td><input id="gbtn51" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 12, 'gbtn51')"></td>
+			<td><input id="gbtn52" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 13, 'gbtn52')"></td>
+			<td><input id="gbtn53" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 14, 'gbtn53')"></td>
+			<td><input id="gbtn54" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 15, 'gbtn54')"></td>
+			<td><input id="gbtn55" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 16, 'gbtn55')"></td>
+			<td><input id="gbtn56" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 17, 'gbtn56')"></td>
+			<td><input id="gbtn57" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(2, 18, 'gbtn57')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn58" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 0, 'gbtn58')"></td>
+			<td><input id="gbtn59" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 1, 'gbtn59')"></td>
+			<td><input id="gbtn60" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 2, 'gbtn60')"></td>
+			<td><input id="gbtn61" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 3, 'gbtn61')"></td>
+			<td><input id="gbtn62" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 4, 'gbtn62')"></td>
+			<td><input id="gbtn63" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 5, 'gbtn63')"></td>
+			<td><input id="gbtn64" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 6, 'gbtn64')"></td>
+			<td><input id="gbtn65" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 7, 'gbtn65')"></td>
+			<td><input id="gbtn66" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 8, 'gbtn66')"></td>
+			<td><input id="gbtn67" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 9, 'gbtn67')"></td>
+			<td><input id="gbtn68" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 10, 'gbtn68')"></td>
+			<td><input id="gbtn69" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 11, 'gbtn69')"></td>
+			<td><input id="gbtn70" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 12, 'gbtn70')"></td>
+			<td><input id="gbtn71" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 13, 'gbtn71')"></td>
+			<td><input id="gbtn72" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 14, 'gbtn72')"></td>
+			<td><input id="gbtn73" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 15, 'gbtn73')"></td>
+			<td><input id="gbtn74" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 16, 'gbtn74')"></td>
+			<td><input id="gbtn75" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 17, 'gbtn75')"></td>
+			<td><input id="gbtn76" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(3, 18, 'gbtn76')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn77" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 0, 'gbtn77')"></td>
+			<td><input id="gbtn78" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 1, 'gbtn78')"></td>
+			<td><input id="gbtn79" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 2, 'gbtn79')"></td>
+			<td><input id="gbtn80" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 3, 'gbtn80')"></td>
+			<td><input id="gbtn81" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 4, 'gbtn81')"></td>
+			<td><input id="gbtn82" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 5, 'gbtn82')"></td>
+			<td><input id="gbtn83" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 6, 'gbtn83')"></td>
+			<td><input id="gbtn84" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 7, 'gbtn84')"></td>
+			<td><input id="gbtn85" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 8, 'gbtn85')"></td>
+			<td><input id="gbtn86" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 9, 'gbtn86')"></td>
+			<td><input id="gbtn87" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 10, 'gbtn87')"></td>
+			<td><input id="gbtn88" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 11, 'gbtn88')"></td>
+			<td><input id="gbtn89" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 12, 'gbtn89')"></td>
+			<td><input id="gbtn90" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 13, 'gbtn90')"></td>
+			<td><input id="gbtn91" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 14, 'gbtn91')"></td>
+			<td><input id="gbtn92" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 15, 'gbtn92')"></td>
+			<td><input id="gbtn93" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 16, 'gbtn93')"></td>
+			<td><input id="gbtn94" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 17, 'gbtn94')"></td>
+			<td><input id="gbtn95" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(4, 18, 'gbtn95')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn96" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 0, 'gbtn96')"></td>
+			<td><input id="gbtn97" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 1, 'gbtn97')"></td>
+			<td><input id="gbtn98" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 2, 'gbtn98')"></td>
+			<td><input id="gbtn99" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 3, 'gbtn99')"></td>
+			<td><input id="gbtn100" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 4, 'gbtn100')"></td>
+			<td><input id="gbtn101" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 5, 'gbtn101')"></td>
+			<td><input id="gbtn102" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 6, 'gbtn102')"></td>
+			<td><input id="gbtn103" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 7, 'gbtn103')"></td>
+			<td><input id="gbtn104" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 8, 'gbtn104')"></td>
+			<td><input id="gbtn105" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 9, 'gbtn105')"></td>
+			<td><input id="gbtn106" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 10, 'gbtn106')"></td>
+			<td><input id="gbtn107" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 11, 'gbtn107')"></td>
+			<td><input id="gbtn108" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 12, 'gbtn108')"></td>
+			<td><input id="gbtn109" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 13, 'gbtn109')"></td>
+			<td><input id="gbtn110" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 14, 'gbtn110')"></td>
+			<td><input id="gbtn111" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 15, 'gbtn111')"></td>
+			<td><input id="gbtn112" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 16, 'gbtn112')"></td>
+			<td><input id="gbtn113" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 17, 'gbtn113')"></td>
+			<td><input id="gbtn114" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(5, 18, 'gbtn114')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn115" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 0, 'gbtn115')"></td>
+			<td><input id="gbtn116" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 1, 'gbtn116')"></td>
+			<td><input id="gbtn117" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 2, 'gbtn117')"></td>
+			<td><input id="gbtn118" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 3, 'gbtn118')"></td>
+			<td><input id="gbtn119" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 4, 'gbtn119')"></td>
+			<td><input id="gbtn120" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 5, 'gbtn120')"></td>
+			<td><input id="gbtn121" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 6, 'gbtn121')"></td>
+			<td><input id="gbtn122" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 7, 'gbtn122')"></td>
+			<td><input id="gbtn123" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 8, 'gbtn123')"></td>
+			<td><input id="gbtn124" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 9, 'gbtn124')"></td>
+			<td><input id="gbtn125" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 10, 'gbtn125')"></td>
+			<td><input id="gbtn126" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 11, 'gbtn126')"></td>
+			<td><input id="gbtn127" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 12, 'gbtn127')"></td>
+			<td><input id="gbtn128" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 13, 'gbtn128')"></td>
+			<td><input id="gbtn129" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 14, 'gbtn129')"></td>
+			<td><input id="gbtn130" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 15, 'gbtn130')"></td>
+			<td><input id="gbtn131" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 16, 'gbtn131')"></td>
+			<td><input id="gbtn132" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 17, 'gbtn132')"></td>
+			<td><input id="gbtn133" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(6, 18, 'gbtn133')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn134" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 0, 'gbtn134')"></td>
+			<td><input id="gbtn135" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 1, 'gbtn135')"></td>
+			<td><input id="gbtn136" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 2, 'gbtn136')"></td>
+			<td><input id="gbtn137" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 3, 'gbtn137')"></td>
+			<td><input id="gbtn138" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 4, 'gbtn138')"></td>
+			<td><input id="gbtn139" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 5, 'gbtn139')"></td>
+			<td><input id="gbtn140" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 6, 'gbtn140')"></td>
+			<td><input id="gbtn141" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 7, 'gbtn141')"></td>
+			<td><input id="gbtn142" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 8, 'gbtn142')"></td>
+			<td><input id="gbtn143" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 9, 'gbtn143')"></td>
+			<td><input id="gbtn144" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 10, 'gbtn144')"></td>
+			<td><input id="gbtn145" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 11, 'gbtn145')"></td>
+			<td><input id="gbtn146" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 12, 'gbtn146')"></td>
+			<td><input id="gbtn147" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 13, 'gbtn147')"></td>
+			<td><input id="gbtn148" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 14, 'gbtn148')"></td>
+			<td><input id="gbtn149" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 15, 'gbtn149')"></td>
+			<td><input id="gbtn150" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 16, 'gbtn150')"></td>
+			<td><input id="gbtn151" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 17, 'gbtn151')"></td>
+			<td><input id="gbtn152" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(7, 18, 'gbtn152')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn153" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 0, 'gbtn153')"></td>
+			<td><input id="gbtn154" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 1, 'gbtn154')"></td>
+			<td><input id="gbtn155" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 2, 'gbtn155')"></td>
+			<td><input id="gbtn156" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 3, 'gbtn156')"></td>
+			<td><input id="gbtn157" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 4, 'gbtn157')"></td>
+			<td><input id="gbtn158" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 5, 'gbtn158')"></td>
+			<td><input id="gbtn159" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 6, 'gbtn159')"></td>
+			<td><input id="gbtn160" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 7, 'gbtn160')"></td>
+			<td><input id="gbtn161" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 8, 'gbtn161')"></td>
+			<td><input id="gbtn162" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 9, 'gbtn162')"></td>
+			<td><input id="gbtn163" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 10, 'gbtn163')"></td>
+			<td><input id="gbtn164" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 11, 'gbtn164')"></td>
+			<td><input id="gbtn165" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 12, 'gbtn165')"></td>
+			<td><input id="gbtn166" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 13, 'gbtn166')"></td>
+			<td><input id="gbtn167" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 14, 'gbtn167')"></td>
+			<td><input id="gbtn168" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 15, 'gbtn168')"></td>
+			<td><input id="gbtn169" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 16, 'gbtn169')"></td>
+			<td><input id="gbtn170" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 17, 'gbtn170')"></td>
+			<td><input id="gbtn171" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(8, 18, 'gbtn171')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn172" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 0, 'gbtn172')"></td>
+			<td><input id="gbtn173" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 1, 'gbtn173')"></td>
+			<td><input id="gbtn174" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 2, 'gbtn174')"></td>
+			<td><input id="gbtn175" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 3, 'gbtn175')"></td>
+			<td><input id="gbtn176" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 4, 'gbtn176')"></td>
+			<td><input id="gbtn177" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 5, 'gbtn177')"></td>
+			<td><input id="gbtn178" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 6, 'gbtn178')"></td>
+			<td><input id="gbtn179" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 7, 'gbtn179')"></td>
+			<td><input id="gbtn180" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 8, 'gbtn180')"></td>
+			<td><input id="gbtn181" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 9, 'gbtn181')"></td>
+			<td><input id="gbtn182" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 10, 'gbtn182')"></td>
+			<td><input id="gbtn183" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 11, 'gbtn183')"></td>
+			<td><input id="gbtn184" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 12, 'gbtn184')"></td>
+			<td><input id="gbtn185" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 13, 'gbtn185')"></td>
+			<td><input id="gbtn186" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 14, 'gbtn186')"></td>
+			<td><input id="gbtn187" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 15, 'gbtn187')"></td>
+			<td><input id="gbtn188" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 16, 'gbtn188')"></td>
+			<td><input id="gbtn189" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 17, 'gbtn189')"></td>
+			<td><input id="gbtn190" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(9, 18, 'gbtn190')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn191" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 0, 'gbtn191')"></td>
+			<td><input id="gbtn192" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 1, 'gbtn192')"></td>
+			<td><input id="gbtn193" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 2, 'gbtn193')"></td>
+			<td><input id="gbtn194" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 3, 'gbtn194')"></td>
+			<td><input id="gbtn195" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 4, 'gbtn195')"></td>
+			<td><input id="gbtn196" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 5, 'gbtn196')"></td>
+			<td><input id="gbtn197" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 6, 'gbtn197')"></td>
+			<td><input id="gbtn198" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 7, 'gbtn198')"></td>
+			<td><input id="gbtn199" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 8, 'gbtn199')"></td>
+			<td><input id="gbtn200" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 9, 'gbtn200')"></td>
+			<td><input id="gbtn201" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 10, 'gbtn201')"></td>
+			<td><input id="gbtn202" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 11, 'gbtn202')"></td>
+			<td><input id="gbtn203" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 12, 'gbtn203')"></td>
+			<td><input id="gbtn204" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 13, 'gbtn204')"></td>
+			<td><input id="gbtn205" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 14, 'gbtn205')"></td>
+			<td><input id="gbtn206" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 15, 'gbtn206')"></td>
+			<td><input id="gbtn207" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 16, 'gbtn207')"></td>
+			<td><input id="gbtn208" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 17, 'gbtn208')"></td>
+			<td><input id="gbtn209" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(10, 18, 'gbtn209')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn210" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 0, 'gbtn210')"></td>
+			<td><input id="gbtn211" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 1, 'gbtn211')"></td>
+			<td><input id="gbtn212" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 2, 'gbtn212')"></td>
+			<td><input id="gbtn213" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 3, 'gbtn213')"></td>
+			<td><input id="gbtn214" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 4, 'gbtn214')"></td>
+			<td><input id="gbtn215" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 5, 'gbtn215')"></td>
+			<td><input id="gbtn216" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 6, 'gbtn216')"></td>
+			<td><input id="gbtn217" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 7, 'gbtn217')"></td>
+			<td><input id="gbtn218" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 8, 'gbtn218')"></td>
+			<td><input id="gbtn219" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 9, 'gbtn219')"></td>
+			<td><input id="gbtn220" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 10, 'gbtn220')"></td>
+			<td><input id="gbtn221" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 11, 'gbtn221')"></td>
+			<td><input id="gbtn222" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 12, 'gbtn222')"></td>
+			<td><input id="gbtn223" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 13, 'gbtn223')"></td>
+			<td><input id="gbtn224" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 14, 'gbtn224')"></td>
+			<td><input id="gbtn225" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 15, 'gbtn225')"></td>
+			<td><input id="gbtn226" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 16, 'gbtn226')"></td>
+			<td><input id="gbtn227" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 17, 'gbtn227')"></td>
+			<td><input id="gbtn228" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(11, 18, 'gbtn228')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn229" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 0, 'gbtn229')"></td>
+			<td><input id="gbtn230" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 1, 'gbtn230')"></td>
+			<td><input id="gbtn231" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 2, 'gbtn231')"></td>
+			<td><input id="gbtn232" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 3, 'gbtn232')"></td>
+			<td><input id="gbtn233" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 4, 'gbtn233')"></td>
+			<td><input id="gbtn234" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 5, 'gbtn234')"></td>
+			<td><input id="gbtn235" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 6, 'gbtn235')"></td>
+			<td><input id="gbtn236" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 7, 'gbtn236')"></td>
+			<td><input id="gbtn237" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 8, 'gbtn237')"></td>
+			<td><input id="gbtn238" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 9, 'gbtn238')"></td>
+			<td><input id="gbtn239" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 10, 'gbtn239')"></td>
+			<td><input id="gbtn240" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 11, 'gbtn240')"></td>
+			<td><input id="gbtn241" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 12, 'gbtn241')"></td>
+			<td><input id="gbtn242" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 13, 'gbtn242')"></td>
+			<td><input id="gbtn243" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 14, 'gbtn243')"></td>
+			<td><input id="gbtn244" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 15, 'gbtn244')"></td>
+			<td><input id="gbtn245" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 16, 'gbtn245')"></td>
+			<td><input id="gbtn246" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 17, 'gbtn246')"></td>
+			<td><input id="gbtn247" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(12, 18, 'gbtn247')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn248" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 0, 'gbtn248')"></td>
+			<td><input id="gbtn249" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 1, 'gbtn249')"></td>
+			<td><input id="gbtn250" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 2, 'gbtn250')"></td>
+			<td><input id="gbtn251" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 3, 'gbtn251')"></td>
+			<td><input id="gbtn252" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 4, 'gbtn252')"></td>
+			<td><input id="gbtn253" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 5, 'gbtn253')"></td>
+			<td><input id="gbtn254" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 6, 'gbtn254')"></td>
+			<td><input id="gbtn255" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 7, 'gbtn255')"></td>
+			<td><input id="gbtn256" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 8, 'gbtn256')"></td>
+			<td><input id="gbtn257" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 9, 'gbtn257')"></td>
+			<td><input id="gbtn258" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 10, 'gbtn258')"></td>
+			<td><input id="gbtn259" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 11, 'gbtn259')"></td>
+			<td><input id="gbtn260" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 12, 'gbtn260')"></td>
+			<td><input id="gbtn261" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 13, 'gbtn261')"></td>
+			<td><input id="gbtn262" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 14, 'gbtn262')"></td>
+			<td><input id="gbtn263" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 15, 'gbtn263')"></td>
+			<td><input id="gbtn264" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 16, 'gbtn264')"></td>
+			<td><input id="gbtn265" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 17, 'gbtn265')"></td>
+			<td><input id="gbtn266" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(13, 18, 'gbtn266')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn267" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 0, 'gbtn267')"></td>
+			<td><input id="gbtn268" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 1, 'gbtn268')"></td>
+			<td><input id="gbtn269" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 2, 'gbtn269')"></td>
+			<td><input id="gbtn270" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 3, 'gbtn270')"></td>
+			<td><input id="gbtn271" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 4, 'gbtn271')"></td>
+			<td><input id="gbtn272" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 5, 'gbtn272')"></td>
+			<td><input id="gbtn273" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 6, 'gbtn273')"></td>
+			<td><input id="gbtn274" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 7, 'gbtn274')"></td>
+			<td><input id="gbtn275" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 8, 'gbtn275')"></td>
+			<td><input id="gbtn276" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 9, 'gbtn276')"></td>
+			<td><input id="gbtn277" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 10, 'gbtn277')"></td>
+			<td><input id="gbtn278" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 11, 'gbtn278')"></td>
+			<td><input id="gbtn279" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 12, 'gbtn279')"></td>
+			<td><input id="gbtn280" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 13, 'gbtn280')"></td>
+			<td><input id="gbtn281" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 14, 'gbtn281')"></td>
+			<td><input id="gbtn282" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 15, 'gbtn282')"></td>
+			<td><input id="gbtn283" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 16, 'gbtn283')"></td>
+			<td><input id="gbtn284" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 17, 'gbtn284')"></td>
+			<td><input id="gbtn285" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(14, 18, 'gbtn285')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn286" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 0, 'gbtn286')"></td>
+			<td><input id="gbtn287" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 1, 'gbtn287')"></td>
+			<td><input id="gbtn288" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 2, 'gbtn288')"></td>
+			<td><input id="gbtn289" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 3, 'gbtn289')"></td>
+			<td><input id="gbtn290" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 4, 'gbtn290')"></td>
+			<td><input id="gbtn291" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 5, 'gbtn291')"></td>
+			<td><input id="gbtn292" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 6, 'gbtn292')"></td>
+			<td><input id="gbtn293" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 7, 'gbtn293')"></td>
+			<td><input id="gbtn294" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 8, 'gbtn294')"></td>
+			<td><input id="gbtn295" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 9, 'gbtn295')"></td>
+			<td><input id="gbtn296" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 10, 'gbtn296')"></td>
+			<td><input id="gbtn297" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 11, 'gbtn297')"></td>
+			<td><input id="gbtn298" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 12, 'gbtn298')"></td>
+			<td><input id="gbtn299" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 13, 'gbtn299')"></td>
+			<td><input id="gbtn300" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 14, 'gbtn300')"></td>
+			<td><input id="gbtn301" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 15, 'gbtn301')"></td>
+			<td><input id="gbtn302" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 16, 'gbtn302')"></td>
+			<td><input id="gbtn303" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 17, 'gbtn303')"></td>
+			<td><input id="gbtn304" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(15, 18, 'gbtn304')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn305" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 0, 'gbtn305')"></td>
+			<td><input id="gbtn306" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 1, 'gbtn306')"></td>
+			<td><input id="gbtn307" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 2, 'gbtn307')"></td>
+			<td><input id="gbtn308" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 3, 'gbtn308')"></td>
+			<td><input id="gbtn309" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 4, 'gbtn309')"></td>
+			<td><input id="gbtn310" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 5, 'gbtn310')"></td>
+			<td><input id="gbtn311" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 6, 'gbtn311')"></td>
+			<td><input id="gbtn312" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 7, 'gbtn312')"></td>
+			<td><input id="gbtn313" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 8, 'gbtn313')"></td>
+			<td><input id="gbtn314" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 9, 'gbtn314')"></td>
+			<td><input id="gbtn315" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 10, 'gbtn315')"></td>
+			<td><input id="gbtn316" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 11, 'gbtn316')"></td>
+			<td><input id="gbtn317" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 12, 'gbtn317')"></td>
+			<td><input id="gbtn318" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 13, 'gbtn318')"></td>
+			<td><input id="gbtn319" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 14, 'gbtn319')"></td>
+			<td><input id="gbtn320" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 15, 'gbtn320')"></td>
+			<td><input id="gbtn321" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 16, 'gbtn321')"></td>
+			<td><input id="gbtn322" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 17, 'gbtn322')"></td>
+			<td><input id="gbtn323" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(16, 18, 'gbtn323')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn324" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 0, 'gbtn324')"></td>
+			<td><input id="gbtn325" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 1, 'gbtn325')"></td>
+			<td><input id="gbtn326" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 2, 'gbtn326')"></td>
+			<td><input id="gbtn327" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 3, 'gbtn327')"></td>
+			<td><input id="gbtn328" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 4, 'gbtn328')"></td>
+			<td><input id="gbtn329" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 5, 'gbtn329')"></td>
+			<td><input id="gbtn330" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 6, 'gbtn330')"></td>
+			<td><input id="gbtn331" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 7, 'gbtn331')"></td>
+			<td><input id="gbtn332" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 8, 'gbtn332')"></td>
+			<td><input id="gbtn333" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 9, 'gbtn333')"></td>
+			<td><input id="gbtn334" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 10, 'gbtn334')"></td>
+			<td><input id="gbtn335" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 11, 'gbtn335')"></td>
+			<td><input id="gbtn336" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 12, 'gbtn336')"></td>
+			<td><input id="gbtn337" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 13, 'gbtn337')"></td>
+			<td><input id="gbtn338" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 14, 'gbtn338')"></td>
+			<td><input id="gbtn339" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 15, 'gbtn339')"></td>
+			<td><input id="gbtn340" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 16, 'gbtn340')"></td>
+			<td><input id="gbtn341" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 17, 'gbtn341')"></td>
+			<td><input id="gbtn342" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(17, 18, 'gbtn342')"></td>
+			</tr>
+			<tr>
+			<td><input id="gbtn343" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 0, 'gbtn343')"></td>
+			<td><input id="gbtn344" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 1, 'gbtn344')"></td>
+			<td><input id="gbtn345" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 2, 'gbtn345')"></td>
+			<td><input id="gbtn346" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 3, 'gbtn346')"></td>
+			<td><input id="gbtn347" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 4, 'gbtn347')"></td>
+			<td><input id="gbtn348" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 5, 'gbtn348')"></td>
+			<td><input id="gbtn349" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 6, 'gbtn349')"></td>
+			<td><input id="gbtn350" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 7, 'gbtn350')"></td>
+			<td><input id="gbtn351" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 8, 'gbtn351')"></td>
+			<td><input id="gbtn352" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 9, 'gbtn352')"></td>
+			<td><input id="gbtn353" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 10, 'gbtn353')"></td>
+			<td><input id="gbtn354" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 11, 'gbtn354')"></td>
+			<td><input id="gbtn355" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 12, 'gbtn355')"></td>
+			<td><input id="gbtn356" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 13, 'gbtn356')"></td>
+			<td><input id="gbtn357" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 14, 'gbtn357')"></td>
+			<td><input id="gbtn358" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 15, 'gbtn358')"></td>
+			<td><input id="gbtn359" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 16, 'gbtn359')"></td>
+			<td><input id="gbtn360" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 17, 'gbtn360')"></td>
+			<td><input id="gbtn361" type="image" src="img/box.png" width="32" height="30" onclick="gomokuClick(18, 18, 'gbtn361')"></td>
+			</tr>
+		</table>
+	</body>
+</html>
