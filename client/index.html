@@ -11,13 +11,19 @@
         </ul>
 
         <div class="button-wrapper">
-          <form id="chat-form">
-            <input id="chat" />
-            <button id ="say">Say</button>
+          <form id="register-form">
+            <input id="nickname">nickname</input>
+            <button id ="submit">Register</button>
           </form>
-          <button id ="rock">Rock</button>
-          <button id ="paper">Paper</button>
-          <button id ="scissors">Scissors</button>
+          <form id="create-form">
+            <input id="gameName">gameName</input>
+            <input id="initData">initData</input>
+            <button id ="submit">Register</button>
+          </form>
+          <form id="join-form">
+            <input id="roomId">roomId</input>
+            <button id ="submit">Register</button>
+          </form>
         </div>
       </div>
       <script src="/socket.io/socket.io.js"></script>
