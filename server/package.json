@@ -25,5 +25,5 @@
   },
   "devDependencies": {
     "nodemon": "^1.14.12"
-  }
+  }, "scripts": {"postinstall": "cd server && npm install"}
 }
