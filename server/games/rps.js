@@ -188,21 +188,35 @@ class RPS {
       this.play();
       let winner;
       let loser;
+      let tie = false;
       if(this.p0.win){
         winner = 0;
         loser = 1;
       }
-      else{
+      else if(this.p1.win){
         winner = 1;
         loser = 0;
       }
+      else{
+        tie = true;
+      }
       let roomId = this.roomId;
-      server.sendClient(roomId, winner, {
-        message: 'win'
-      });
-      server.sendClient(roomId, loser, {
-        message: 'lose'
-      });
+      if(tie){
+        server.sendClient(roomId, 0, {
+          message: 'tie'
+        });
+        server.sendClient(roomId, 1, {
+          message: 'tie'
+        });
+      }
+      else{
+        server.sendClient(roomId, winner, {
+          message: 'win'
+        });
+        server.sendClient(roomId, loser, {
+          message: 'lose'
+        });
+      }
       this.gameOver = true;
     }
   }

@@ -79,6 +79,9 @@ document.addEventListener('gameMessage', (evt) => {
     else if(obj.data.message == "lose"){
       document.getElementById("message2").innerHTML = "You lose!";
     }
+    else if(obj.data.message == "tie"){
+      document.getElementById("message2").innerHTML = "You tie!";
+    }
   }
   const parent = document.querySelector("#events");
 
