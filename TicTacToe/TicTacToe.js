@@ -1,5 +1,7 @@
-board = [];
-playerTurn = 1;
+board = [];//board state
+playerTurn = 1; //keeps track of player playerTurn
+//add in which player is which symbol
+
 const X_IMG = "img/x.png";
 const O_IMG = "img/o.png";
 const BOX_IMG = "img/box.img";
@@ -57,4 +59,24 @@ function tttCheckWin(x, y, player) {
 	}
 
 	return false;
+}
+
+function isFirstPlayerturn(){
+	if(playerTurn == 1){
+		return true;
+	}
+	else{
+		alert("It's not your turn!");
+		return false;
+	}
+}
+
+function isSecondPlayerturn(){
+	if(!isFirstPlayerturn()){
+		return true;
+	}
+	else{
+		alert("It's not your turn!");
+		return false;
+	}
 }
