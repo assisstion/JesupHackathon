@@ -68,8 +68,9 @@ server.on('error', (e) => {
   console.error('Server error:', e);
 });
 
-server.listen(8080, () => {
-  console.log('RPS started on 8080');
+var port = process.env.PORT || 8080;
+server.listen(port, () => {
+  console.log('RPS started on ' + port);
 });
 
 function processMessage(sock, obj){
