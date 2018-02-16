@@ -173,9 +173,16 @@ export class RPS {
         winner = 0;
         loser = 1;
       }
-      else{
+      else if(this.p1.win){
         winner = 1;
         loser = 0;
+      } else {
+        server.sendClient(1, {
+          message: 'draw'
+        });
+        server.sendClient(0, {
+          message: 'draw'
+        })
       }
       server.sendClient(winner, {
         message: 'win'

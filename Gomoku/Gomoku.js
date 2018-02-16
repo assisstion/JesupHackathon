@@ -29,105 +29,110 @@ function gomokuClick(x, y ,id) {
 }
 
 function gomokuCheckWin(x, y, player){
+	// horizontal
+	var isCounting = false;
+	var count = 0;
+	for (var i = 0; i < 19; i++) {
+		if (board[i][y] == player) {
+			if (isCounting) {
+				count++;
+				if (count == 5) {
+					return true;
+				}
+			} else {
+				isCounting = true;
+				count++;
+			}
+		} else {
+			isCounting = false;
+			count = 0;
+		}
+	}
 
-	//Check if the case exists
+	// vertical
+	var isCounting = false;
+	var count = 0;
+	for (var i = 0; i < 19; i++) {
+		if (board[x][i] == player) {
+			if (isCounting) {
+				count++;
+				if (count == 5) {
+					return true;
+				}
+			} else {
+				isCounting = true;
+				count++;
+			}
+		} else {
+			isCounting = false;
+			count = 0;
+		}
+	}
 
-	//horizontal right
-	if (x + 5 < 19) {
-		var win = true;
-		for(var i = 0; i < 5; i++) {
-			if (board[x + i][y] != player) {
-				win = false;
+	// diagonal up-right
+	var isCounting = false;
+	var count = 0;
+
+	// find starting place of diagonal
+	var currentX = x;
+	var currentY = y;
+	while(true) {
+		if (currentX == 0 || currentY == 18) {
+			break;
+		}
+		currentX--;
+		currentY++;
+	}
+
+	for (var i = 0; i < 19; i++) {
+		if (board[currentX + i][currentY - i] == player) {
+			if (isCounting) {
+				count++;
+				if (count == 5) {
+					return true;
+				}
+			} else {
+				isCounting = true;
+				count++;
 			}
+		} else {
+			isCounting = false;
+			count = 0;
 		}
 	}
-	if (win) {
-		return true;
+
+	// diagonal up-left
+	var isCounting = false;
+	var count = 0;
+
+	// find starting place of diagonal
+	var currentX = x;
+	var currentY = y;
+	while(true) {
+		if (currentX == 18 || currentY == 18) {
+			break;
+		}
+		currentX++;
+		currentY++;
 	}
-	//horizontal left
-	if (x - 5 > -1){
-		var win = true;
-		for (var i = 0; i < 5; i++) {
-			if (board[x - i][y] != player) {
-				win = false;
+
+	for (var i = 0; i < 19; i++) {
+		if (board[currentX - i][currentY - i] == player) {
+			if (isCounting) {
+				count++;
+				if (count == 5) {
+					return true;
+				}
+			} else {
+				isCounting = true;
+				count++;
 			}
+		} else {
+			isCounting = false;
+			count = 0;
 		}
 	}
-	if (win) {
-		return true;
-	}
-	//vertical up
-	if (y - 5 > -1){
-		var win = true;
-		for (var i = 0; i < 5; i++){
-			if (board[x][y - i] != player){
-				win = false;
-			}
-		}
-	}
-	if (win) {
-		return true;
-	}
-	//vertical down
-	if (y + 5 < 19) {
-		var win = true;
-		for (var i = 0; i < 5; i++){
-			if (board[x][y + i] != player){
-				win = false;
-			}
-		}
-	}
-	if (win) {
-		return true;
-	}
-	//diag top right
-	if (x + 5 < 19 && y - 5 > -1 ) {
-		var win = true;
-		for (var i = 0; i < 5; i++) {
-			if (board[x+i][y-i] != player) {
-				win = false;
-			}
-		}
-	}
-	if (win) {
-		return true;
-	}
-	//diag top left
-	if (x - 5 > -1 && y - 5 > -1) {
-		var win = true;
-		for (var i = 0; i < 5; i++) {
-			if (board[x - i][y - i] != player){
-				win = false;
-			}
-		}
-	}
-	if (win) {
-		return true;
-	}
-	//diag bottom right
-	if (x + 5 < 19 && y + 5 < 19) {
-		var win = true;
-		for (var i = 0; i < 5; i++) {
-			if (board[x+i][y+i] != player) {
-				win = false;
-			}
-		}
-	}
-	if (win) {
-		return true;
-	}
-	//diag bottom left
-	if (x - 5 > -1 && y + 5 < 19) {
-		var win = true;
-		for (var i = 0; i < 5; i++) {
-			if (board[x-i][y+i] != player) {
-				win=false;
-			}
-		}
-	}
-	if (win) {
-		return true;
-	}
+
 	return false;
 }
 
