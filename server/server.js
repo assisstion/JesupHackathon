@@ -96,12 +96,25 @@ function processMessage(sock, obj){
 let commands = {
   //nickname: (String)
   register: function(sock, user, data){
-    clients[user] = {
-      socket: sock,
-      nickname: data.nickname
-    };
+    if(clients[user]){
+      clients[user].socket = sock;
+    }
+    else{
+      let nick;
+      if(data){
+        nick = data.nickname;
+      }
+      else{
+        nick = 'Guest';
+      }
+      clients[user] = {
+        socket: sock,
+        nickname: nick
+      };
+    }
     sock.emit('message', cmd('registerSuccess', {
-
+      nickname: clients[user].nickname,
+      roomId: clients[user].roomId
     }));
     console.log('Register success!');
   },
@@ -244,6 +257,13 @@ function startGame(roomId){
   let playerCount = room.players.length;
   room.game.start(roomId, playerCount, room.gameData);
   console.log(`Game in room ${roomId} has started!`);
+  for(let i = 0; i < playerCount; i++){
+    let user = room.players[i];
+    let sock = clients[user].socket;
+    sock.emit('message', cmd('gameStart', {
+      playerList: room.players
+    }));
+  }
 }
 
 function loadGames(){
