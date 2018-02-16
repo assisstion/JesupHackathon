@@ -28,6 +28,8 @@ class RPS {
     this.p1.scissors = false;
     this.p1.win = false;
     this.p1.hasUpdated = false;
+
+    this.gameOver = false;
   }
 
   //Player One actions
@@ -170,6 +172,9 @@ class RPS {
 
 
   update(player, data) {
+    if(this.gameOver){
+      return;
+    }
     let move = data.move;
     if (player == 0) {
       this.setThrowOne(move);
@@ -198,6 +203,7 @@ class RPS {
       server.sendClient(roomId, loser, {
         message: 'lose'
       });
+      this.gameOver = true;
     }
   }
 

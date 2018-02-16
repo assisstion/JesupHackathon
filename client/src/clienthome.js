@@ -57,7 +57,8 @@ document
 document.addEventListener('gameMessage', (evt) => {
   let obj = evt.detail;
   if(obj.command == "gameStart"){
-    window.location = `./rps/?id=${id}`;
+    let gameName = obj.data.gameName;
+    window.location = `./${gameName}/?id=${id}`;
     return;
   }
   else if(obj.command == "roomCreated"){

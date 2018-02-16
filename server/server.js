@@ -22,7 +22,7 @@ module.exports = {
   }
 };
 
-let gameNames = ['rps'];
+let gameNames = ['rps', 'ttt'];
 
 
 //key: gameName
@@ -262,7 +262,8 @@ function startGame(roomId){
     let user = room.players[i];
     let sock = clients[user].socket;
     sock.emit('message', cmd('gameStart', {
-      playerList: room.players
+      playerList: room.players,
+      gameName: room.gameName
     }));
   }
 }
