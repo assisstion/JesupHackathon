@@ -7,26 +7,29 @@
 
     <body>
       <div class= "rps-wrapper">
-        <ul id="events">
+        <ul id="events" hidden>
         </ul>
 
         <div class="button-wrapper">
           <form id="register-form">
-            <input id="nickname">nickname</input>
-            <button id ="submit">Register</button>
+            Nickname: <input id="nickname"></input>
+            <!--<button id ="submit">Register</button>-->
           </form>
           <form id="create-form">
-            <input id="gameName">gameName</input>
-            <input id="initData">initData</input>
-            <button id ="submit">Register</button>
+            <select id = "gameName">
+              <option value ="rps">Rock Paper Scissors</option>
+            </select>
+            <button id ="submit">Create Game</button>
           </form>
           <form id="join-form">
-            <input id="roomId">roomId</input>
-            <button id ="submit">Register</button>
+            Room ID: <input id="roomId"></input>
+            <button id ="submit">Join Game</button>
           </form>
         </div>
       </div>
+      <p id="message"></p>
       <script src="/socket.io/socket.io.js"></script>
-      <script src="src/client.js"></script>
+      <script src="src/clientlib.js"></script>
+      <script src="src/clienthome.js"></script>
     </body>
 </html>
