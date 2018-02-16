@@ -1,23 +1,102 @@
-<!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <title>Rock Paper Scissors</title>
-      <link rel="stylesheet" href="styles/main.css">
-    </head>
+<!doctype html>
 
-    <body>
-      <div class= "rps-wrapper">
-        <ul id="events">
-        </ul>
+<html>
+<head lang="en">
+  <title> Rock Paper Scissors </title>
+</head>
+<style>
+  body {
+    background-color: #512698;
+  }
+  p {
+    color: #cccccc;
+  }
+  h1 {
+    color: #cccccc;
+  }
+</style>
+<body>
 
-        <div class="button-wrapper">
-          <form id="message-form">
-            <input id="message" />
-            <button id ="say">Send</button>
-          </form>
-        </div>
-      </div>
-      <script src="/socket.io/socket.io.js"></script>
-      <script src="../src/rps.js"></script>
-    </body>
+  <h1> Welcome to Williams Rock Paper Scissors </h1>
+  <br>
+  <br>
+  <p> Choose your throw </p>
+  <br>
+  <button onclick="playRock()"><img src="rock.png" width="200" height="200"/></button>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="../src/clientlib.js"></script>
+<script>
+function playRock() {
+  document.getElementById("message").innerHTML = "You've played rock!";
+  sendServer({
+    move: 1
+  });
+}
+</script>
+
+<button onclick="playPaper()"><img src="paper.png" width="200" height="200"/></button>
+
+<script>
+function playPaper() {
+  document.getElementById("message").innerHTML = "You've played paper!";
+  sendServer({
+    move: 2
+  });
+}
+</script>
+
+<button onclick="playScissors()"><img src="scissors.png" width="200" height="200"/></button>
+
+<script>
+function playScissors() {
+  document.getElementById("message").innerHTML = "You've played scissors!";
+  sendServer({
+    move: 3
+  });
+}
+</script>
+
+
+<p id="message"></p>
+<p id="message2"></p>
+<ul id="events" hidden>
+</ul>
+<script>
+document.addEventListener('gameMessage', (evt) => {
+  let obj = evt.detail;
+  if(obj.command == "registerSuccess"){
+    if(!obj.data.roomId){
+      window.location = `../`;
+    }
+    return;
+  }
+  else if(obj.command == "gameUpdate"){
+    if(obj.data.message == "win"){
+      document.getElementById("message2").innerHTML = "You win!";
+    }
+    else if(obj.data.message == "lose"){
+      document.getElementById("message2").innerHTML = "You lose!";
+    }
+  }
+  const parent = document.querySelector("#events");
+
+  const el = document.createElement('li');
+  el.innerHTML = JSON.stringify(evt.detail);
+
+  parent.appendChild(el);
+});
+</script>
+  <div align="right">
+  <button onclick="hiddenCredits()"><img src="williams.png" /></button>
+  <p id="credits"></p>
+  </div>
+
+  <script>
+  function hiddenCredits() {
+    document.getElementById("credits").innerHTML = "Credits: Markus Feng, Christopher Liu, Jian Lu, and Will Fung";
+  }
+  </script>
+</body>
 </html>
